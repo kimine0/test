@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TORIEL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+      <div class="logo">
+        <img src="source_svg/title.svg" alt="Logo">
+  </header>
+
+  <!-- Undertale 로고 (오른쪽 위) -->
+  <div class="undertale-logo" onclick="toggleMenu()">
+    <img src="source_svg/undertale_logo.svg" alt="Undertale Logo">
+  </div>
+
+
+  <!-- Scroll-down SVG -->
+  <div id="scroll-down-icon" class="scroll-down-container">
+    <img src="source_svg/scrolldown.svg" alt="Scroll Down" id="scroll-down-svg">
+  </div>
+
+  <!-- 메인 이미지-->
+  <div class="toriel">
+    <img src="source_img/img_default.png" alt="Toriel">
+  </div>
+
+  <!-- 아래-->
+  <div class="container">
+    <!--얼굴 이미지-->
+    <img src="source_img/face_default.png" alt="Toriel_face"class="toriel_face">
+    
+    <!--대사 이미지-->
+    <div class="speech-container">
+      <img src="source_svg/dialog00.svg" alt="Dialog"class="dialog">
+
+      <!--버튼들-->
+      <div class="button-container">
+        <button class="button act">
+          <a href="toriel_act.html">
+            <img class="img-default" src="source_svg/act.svg" alt="ACT 기본 이미지">
+            <img class="img-hover" src="source_svg/act02.svg" alt="ACT 호버 이미지">
+          </a>
+        </button>
+        <button class="button fight">
+          <a href="toriel_fight.html">
+            <img class="img-default" src="source_svg/fight.svg" alt="FIGHT 기본 이미지">
+            <img class="img-hover" src="source_svg/fight02.svg" alt="FIGHT 호버 이미지">
+          </a>
+        </button>
+        <button class="button mercy">
+          <a href="toriel_mercy.html">
+            <img class="img-default" src="source_svg/mercy.svg" alt="MERCY 기본 이미지">
+            <img class="img-hover" src="source_svg/mercy02.svg" alt="MERCY 호버 이미지">
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript 코드 (마우스 올리면 사라지게 하는 동작)
+    const scrollDownIcon = document.getElementById('scroll-down-icon');
+    
+    scrollDownIcon.addEventListener('mouseover', () => {
+      scrollDownIcon.style.opacity = '0'; // 페이드 아웃 시작
+      scrollDownIcon.style.visibility = 'hidden'; // 완전히 사라지게 하여 클릭 방지
+    });
+
+    scrollDownIcon.addEventListener('transitionend', () => {
+      // opacity가 0으로 끝난 후 display를 none으로 설정할 수도 있습니다.
+      // 그러나 visibility를 사용하여 클릭 영역을 비활성화 할 수 있기 때문에 display는 안 씁니다.
+    });
+  </script>
+</body>
+</html>

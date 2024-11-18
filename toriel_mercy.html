@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TORIEL</title>
+  <link rel="stylesheet" href="style_toriel_mercy.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <!-- 로고를 링크로 감싸서 클릭 시 index.html로 이동 -->
+    <a href="index.html" class="logo">
+      <img src="source_svg/title.svg" alt="Logo">
+    </a>
+  </header>
+
+  <!-- Undertale 로고 (오른쪽 위) -->
+  <div class="undertale-logo" onclick="toggleMenu()">
+    <img src="source_svg/undertale_logo.svg" alt="Undertale Logo">
+  </div>
+
+  <!-- 메인 이미지-->
+  <div class="toriel">
+    <img src="source_img/img_mercy.png" alt="Toriel">
+  </div>
+
+  <div class="svg-container">
+    <img src="source_svg/mercy_move01.svg" alt="SVG 1" class="svg1">
+    <img src="source_svg/mercy_move.svg" alt="SVG 2" class="svg2">
+  </div>
+
+  <!-- 아래-->
+  <div class="container">
+    <!--얼굴 이미지-->
+    <img src="source_img/face_mercy.png" alt="Toriel_face"class="toriel_face">
+    
+    <!--대사 이미지-->
+    <div class="speech-container">
+      <img src="source_svg/dialog03.svg" alt="Dialog"class="dialog">
+
+      <!--버튼들-->
+      <div class="button-container">
+        <button class="button act">
+          <a href="toriel_act.html">
+            <img class="img-default" src="source_svg/act.svg" alt="ACT 기본 이미지">
+            <img class="img-hover" src="source_svg/act02.svg" alt="ACT 호버 이미지">
+          </a>
+        </button>
+        <button class="button fight">
+          <a href="toriel_hehehe.html">
+            <img class="img-default" src="source_svg/fight.svg" alt="FIGHT 기본 이미지">
+            <img class="img-hover" src="source_svg/fight02.svg" alt="FIGHT 호버 이미지">
+          </a>
+        </button>
+        <button class="button mercy">
+          <a href="toriel_mercy.html">
+            <img class="img-default" src="source_svg/mercy.svg" alt="MERCY 기본 이미지">
+            <img class="img-hover" src="source_svg/mercy02.svg" alt="MERCY 호버 이미지">
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript 코드 (마우스 올리면 사라지게 하는 동작)
+    const scrollDownIcon = document.getElementById('scroll-down-icon');
+    
+    scrollDownIcon.addEventListener('mouseover', () => {
+      scrollDownIcon.style.opacity = '0'; // 페이드 아웃 시작
+      scrollDownIcon.style.visibility = 'hidden'; // 완전히 사라지게 하여 클릭 방지
+    });
+
+    scrollDownIcon.addEventListener('transitionend', () => {
+    });
+  </script>
+</body>
+</html>
